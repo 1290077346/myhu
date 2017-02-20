@@ -1,2 +1,4 @@
 <?php
-	echo "»¶Ó­À´µ½ÎÒºõ¡£";
+	echo "æ¬¢è¿Žæ¥åˆ°myhu"."</br>";
+	echo "I am super boy.";
+	
