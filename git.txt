@@ -57,5 +57,34 @@ xxx = 某文件夹名
 	git fetch 		//获取远程库最新版本到本地
 	git pull		//获取远程库最新版本并merge到本地
 	
+分支管理
+	HEAD 			//表示当前分支
+	git branch		//查看当前分支
+	git checkout -b newbrank	//创建并切换到newbrank分支
+	git brank newbrank			//创建newbrank分支
+	git checkout newbrank		//切换到newbrank分支
+	git merge newbrank			//命令用于合并指定分支到当前分支
+	git brank -d newbrank		//删除newbrank分支
+	
+推送本地分支到远程
+	 a.远程已有remote_branch分支并且已经关联本地分支local_branch且本地已经切换到local_branch
+          git push
+     b.远程已有remote_branch分支但未关联本地分支local_branch且本地已经切换到local_branch
+         git push -u origin/remote_branch
+     c.远程没有有remote_branch分支并，本地已经切换到local_branch
+        git push origin local_branch:remote_branch
+	
+删除远程分支remote_branch
+git push origin  :remote_branch	
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
