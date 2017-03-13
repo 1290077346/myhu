@@ -1,0 +1,21 @@
+<?php
+	echo "欢迎来到myhu"."</br>";
+	echo "I am super boy.";
+	class clear{
+		
+		public $nicai;
+		
+		function __construct(nicai $nicai){
+			$this->nicai = $nicai;
+		}
+		
+		public function youteri(){
+			echo $this->nicai;
+		}
+		
+		
+	}
+	
+	$p = new clear;
+	$p->nicai = '123';
+	$p->youteri();

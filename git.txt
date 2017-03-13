@@ -1,0 +1,61 @@
+git 命令与学习
+
+xxx = 某文件夹名
+
+配置git
+	git config --global user.name "Your Name"			//你的名字
+	it config --global user.email "email@example.com"	//你的邮箱
+
+创建版本库
+	mkdir xxx		//创建文件夹
+	cd xxx			//进入文件夹
+	pwd				//查看当前路径
+	ls				//查看当前目录下所有文件
+		 -ah		//查看隐藏目录文件
+	git init		//创建仓库
+	git add	xxx		//将文件添加到暂存区
+	git commit		//提交文件到版本库
+		-m	"说明"	//提交说明
+	git status 		//查看仓库当前的状态
+	git diff xxx	//查看当前修改文件内容
+	
+版本回退
+	git log			//查看历史记录	
+		--pretty=oneline //查看版本号
+	HEAD			//当前版本
+		^			//上一个版本
+		~100		//上一百个版本
+	git reset --hard HEAD^	//回滚到上一版本
+		--hard 3628164 		//按照版本号回滚
+	git reflog		//查看命令记录
+	git checkout -- xxx 	//放弃工作区修改
+	git reset HEAD xxx		//撤回暂存区到工作区
+	
+删除文件
+	rm xxx			//删除文件
+	git rm			//然后git commit 从版本库删除
+	
+远程仓库
+	1.ssh-keygen -t rsa -C "youremail@example.com"  //创建SSH Key
+	2.在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件
+	3.登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+	
+创建远程库
+	1.点击：Create a new repository   域名：https://github.com/new
+	2.Repository name填入 远程库名称
+
+远程库关联
+	git remote add origin git@github.com:1290077346/myhu.git
+	
+远程库操作
+	git push -u	origin master	//将当前分支master推送到远程
+		git push 	//推送
+		-u			//将本地的master分支和远程的master分支关联起来		
+		origin		//远程仓库
+		master		//当前分支
+	git clone 远程库地址	//克隆远程库
+	git fetch 		//获取远程库最新版本到本地
+	git pull		//获取远程库最新版本并merge到本地
+	
+	
+	
